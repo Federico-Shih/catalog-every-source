@@ -1,7 +1,7 @@
 _ > nanoagent.plugin.v0001.ManifestConfig:
 id: catalog-every-source
 name: Catalog Every Source
-version: 0.1.1
+version: 0.1.2
 status: in-development
 spec: nanoagent.plugin/v0001
 
