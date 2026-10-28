@@ -1,0 +1,43 @@
+_ > nanoagent.plugin.v0001.ManifestConfig:
+id: catalog-every-source
+name: Catalog Every Source
+version: 0.1.1
+status: in-development
+spec: nanoagent.plugin/v0001
+
+runtime > nanoagent.plugin.v0001.RuntimeConfig:
+  type: mcp_stdio
+  command: [uv, run, --frozen, python, -m, plugin]
+
+permissions > nanoagent.plugin.v0001.PermissionsConfig:
+  network > nanoagent.plugin.v0001.NetworkConfig:
+    hosts: []
+  filesystem > nanoagent.plugin.v0001.FilesystemConfig:
+    write: [workspace]
+
+# One entry per contract.Tool; its input and output classes are contract.TOOLS's.
+tools > dict[contract.Tool, nanoagent.plugin.v0001.ToolConfig]:
+  list_sources:
+    description: List one page of the mock catalog's sources in some domains, outdated listings included, with every field of each; rate-limited
+  wait:
+    description: Wait a number of seconds on the catalog's clock, as a rate-limited call asks
+  record_source:
+    description: Add one source and its access method to the workspace catalog, catalog.json
+  catalog_truth:
+    description: Every current source the filter matches and their count, the task's hidden reference
+
+# One entry per contract.Task; its input and output classes are contract.TASKS's.
+tasks > dict[contract.Task, nanoagent.plugin.v0001.TaskConfig]:
+  catalog-every-source:
+    description: Record every catalog source that matches a filter, and report how many there are
+    runner: agent
+    tools: [list_sources, wait, record_source]
+    reference: catalog_truth
+    instructions: |-
+      Record in catalog.json every current source of the mock catalog that matches the task's filter, then submit their exact total.
+      Call list_sources with the filter's domains and cursor null. Call it again with the same domains and the next_cursor the last page returned, until next_cursor is null: the last page can hold matches too.
+      list_sources filters by domain only. Apply the rest of the filter yourself to every listed source: its format must be one of formats, its access_method one of access_methods and its license one of licenses (an empty list keeps every value), and its updated year must be updated_since or later (0 keeps every year).
+      Some listings are outdated: their superseded_by names the listing that replaces them. Never record an outdated listing, even when it matches the filter; its replacement may or may not match, and may come on a later page.
+      list_sources is rate-limited. When it fails with "rate limited: wait N seconds", call wait with seconds N, then repeat the same list_sources call; never skip that page. A next_cursor expires 120 seconds after its page: wait only as long as you are told. If a cursor has expired, list again from cursor null.
+      Call record_source once for every current source that matches, with its id and access_method exactly as list_sources listed them. Never record a source twice.
+      When the last page is read, submit total: the number of sources you recorded, 0 when none matched.

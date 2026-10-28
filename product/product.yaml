@@ -1,0 +1,12 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Catalog every data source that matches your filter, with nothing missed"
+summary: "Pick the domains, formats, access methods, licenses and update year you care about. The agent pages through a rate-limited catalog of 56 listings that filters by domain only, applies the rest of the filter itself, leaves out outdated listings, records every current match with how it is read (REST, file, hub or SQL) in catalog.json, and reports the exact count. A deterministic check compares the catalog with the true list."
+highlights:
+  - "Built-in mock catalog, so every run is the same and needs no network"
+  - "Rate limits run on a virtual clock: waiting costs no real time"
+  - "The catalog is checked source by source against the true list"
+steps:
+  - "Choose a filter: domains, formats, access methods, licenses and the earliest update year"
+  - "The agent lists the catalog page by page, waiting out each rate limit"
+  - "It records each matching source and its access method in catalog.json"
+  - "It reports how many sources matched, and the check scores the catalog"

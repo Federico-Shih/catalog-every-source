@@ -1,0 +1,15 @@
+"""wait: moves the virtual clock forward."""
+
+from .checks import MAX_WAIT, result
+
+
+def verify_input(value):
+    if not 0 <= value.seconds <= MAX_WAIT:
+        return result(False, f"seconds must be 0 to {MAX_WAIT}")
+    return result(True, "input is valid")
+
+
+def verify_output(input_value, output_value, workspace):
+    if output_value.now < input_value.seconds:
+        return result(False, "the clock is behind the time waited")
+    return result(True, "the clock moved", now=output_value.now)

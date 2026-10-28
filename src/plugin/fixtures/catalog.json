@@ -1,0 +1,564 @@
+{
+ "sources": [
+  {
+   "id": "src-001",
+   "name": "Global Surface Temperature",
+   "domain": "climate",
+   "format": "csv",
+   "access_method": "rest",
+   "license": "cc-by",
+   "updated": 2014,
+   "superseded_by": "src-054"
+  },
+  {
+   "id": "src-002",
+   "name": "Grid Load Hourly",
+   "domain": "energy",
+   "format": "xml",
+   "access_method": "sql",
+   "license": "cc0",
+   "updated": 2021,
+   "superseded_by": null
+  },
+  {
+   "id": "src-003",
+   "name": "School Enrollment",
+   "domain": "education",
+   "format": "parquet",
+   "access_method": "hub",
+   "license": "odbl",
+   "updated": 2016,
+   "superseded_by": null
+  },
+  {
+   "id": "src-004",
+   "name": "Transit Ridership",
+   "domain": "transport",
+   "format": "json",
+   "access_method": "hub",
+   "license": "proprietary",
+   "updated": 2023,
+   "superseded_by": null
+  },
+  {
+   "id": "src-005",
+   "name": "Central Bank Rates",
+   "domain": "finance",
+   "format": "json",
+   "access_method": "file",
+   "license": "cc-by",
+   "updated": 2018,
+   "superseded_by": null
+  },
+  {
+   "id": "src-006",
+   "name": "Hospital Bed Capacity",
+   "domain": "health",
+   "format": "csv",
+   "access_method": "rest",
+   "license": "odbl",
+   "updated": 2025,
+   "superseded_by": "src-049"
+  },
+  {
+   "id": "src-007",
+   "name": "Arctic Sea Ice Extent",
+   "domain": "climate",
+   "format": "xml",
+   "access_method": "rest",
+   "license": "proprietary",
+   "updated": 2020,
+   "superseded_by": null
+  },
+  {
+   "id": "src-008",
+   "name": "Solar Installations",
+   "domain": "energy",
+   "format": "parquet",
+   "access_method": "sql",
+   "license": "cc-by",
+   "updated": 2015,
+   "superseded_by": "src-051"
+  },
+  {
+   "id": "src-009",
+   "name": "University Graduates",
+   "domain": "education",
+   "format": "parquet",
+   "access_method": "hub",
+   "license": "cc0",
+   "updated": 2022,
+   "superseded_by": null
+  },
+  {
+   "id": "src-010",
+   "name": "Road Traffic Counts",
+   "domain": "transport",
+   "format": "json",
+   "access_method": "hub",
+   "license": "odbl",
+   "updated": 2017,
+   "superseded_by": null
+  },
+  {
+   "id": "src-011",
+   "name": "Equity Daily Prices",
+   "domain": "finance",
+   "format": "csv",
+   "access_method": "file",
+   "license": "cc-by",
+   "updated": 2024,
+   "superseded_by": null
+  },
+  {
+   "id": "src-012",
+   "name": "Vaccination Coverage",
+   "domain": "health",
+   "format": "xml",
+   "access_method": "rest",
+   "license": "cc0",
+   "updated": 2019,
+   "superseded_by": "src-053"
+  },
+  {
+   "id": "src-013",
+   "name": "Daily Rainfall Stations",
+   "domain": "climate",
+   "format": "xml",
+   "access_method": "rest",
+   "license": "odbl",
+   "updated": 2014,
+   "superseded_by": null
+  },
+  {
+   "id": "src-014",
+   "name": "Wind Farm Output",
+   "domain": "energy",
+   "format": "parquet",
+   "access_method": "sql",
+   "license": "proprietary",
+   "updated": 2021,
+   "superseded_by": null
+  },
+  {
+   "id": "src-015",
+   "name": "Teacher Workforce",
+   "domain": "education",
+   "format": "json",
+   "access_method": "hub",
+   "license": "cc-by",
+   "updated": 2016,
+   "superseded_by": null
+  },
+  {
+   "id": "src-016",
+   "name": "Airport Arrivals",
+   "domain": "transport",
+   "format": "csv",
+   "access_method": "hub",
+   "license": "odbl",
+   "updated": 2023,
+   "superseded_by": "src-055"
+  },
+  {
+   "id": "src-017",
+   "name": "Consumer Price Index",
+   "domain": "finance",
+   "format": "csv",
+   "access_method": "file",
+   "license": "proprietary",
+   "updated": 2018,
+   "superseded_by": null
+  },
+  {
+   "id": "src-018",
+   "name": "Air Quality Admissions",
+   "domain": "health",
+   "format": "xml",
+   "access_method": "rest",
+   "license": "cc-by",
+   "updated": 2025,
+   "superseded_by": null
+  },
+  {
+   "id": "src-019",
+   "name": "Atmospheric CO2 Readings",
+   "domain": "climate",
+   "format": "parquet",
+   "access_method": "rest",
+   "license": "cc0",
+   "updated": 2020,
+   "superseded_by": null
+  },
+  {
+   "id": "src-020",
+   "name": "Fuel Retail Prices",
+   "domain": "energy",
+   "format": "json",
+   "access_method": "sql",
+   "license": "odbl",
+   "updated": 2015,
+   "superseded_by": null
+  },
+  {
+   "id": "src-021",
+   "name": "Standardized Test Scores",
+   "domain": "education",
+   "format": "json",
+   "access_method": "hub",
+   "license": "cc-by",
+   "updated": 2022,
+   "superseded_by": null
+  },
+  {
+   "id": "src-022",
+   "name": "Bike Share Trips",
+   "domain": "transport",
+   "format": "csv",
+   "access_method": "hub",
+   "license": "cc0",
+   "updated": 2017,
+   "superseded_by": null
+  },
+  {
+   "id": "src-023",
+   "name": "Municipal Bond Issues",
+   "domain": "finance",
+   "format": "xml",
+   "access_method": "file",
+   "license": "odbl",
+   "updated": 2024,
+   "superseded_by": null
+  },
+  {
+   "id": "src-024",
+   "name": "Clinical Trials Registry",
+   "domain": "health",
+   "format": "parquet",
+   "access_method": "rest",
+   "license": "proprietary",
+   "updated": 2019,
+   "superseded_by": "src-050"
+  },
+  {
+   "id": "src-025",
+   "name": "Glacier Mass Balance",
+   "domain": "climate",
+   "format": "parquet",
+   "access_method": "rest",
+   "license": "cc-by",
+   "updated": 2014,
+   "superseded_by": null
+  },
+  {
+   "id": "src-026",
+   "name": "Power Plant Emissions",
+   "domain": "energy",
+   "format": "json",
+   "access_method": "sql",
+   "license": "odbl",
+   "updated": 2021,
+   "superseded_by": null
+  },
+  {
+   "id": "src-027",
+   "name": "Library Circulation",
+   "domain": "education",
+   "format": "csv",
+   "access_method": "hub",
+   "license": "proprietary",
+   "updated": 2016,
+   "superseded_by": null
+  },
+  {
+   "id": "src-028",
+   "name": "Freight Rail Tonnage",
+   "domain": "transport",
+   "format": "xml",
+   "access_method": "hub",
+   "license": "cc-by",
+   "updated": 2023,
+   "superseded_by": null
+  },
+  {
+   "id": "src-029",
+   "name": "Household Debt Survey",
+   "domain": "finance",
+   "format": "xml",
+   "access_method": "file",
+   "license": "cc0",
+   "updated": 2018,
+   "superseded_by": "src-056"
+  },
+  {
+   "id": "src-030",
+   "name": "Disease Surveillance Weekly",
+   "domain": "health",
+   "format": "parquet",
+   "access_method": "rest",
+   "license": "odbl",
+   "updated": 2025,
+   "superseded_by": null
+  },
+  {
+   "id": "src-031",
+   "name": "Wildfire Perimeters",
+   "domain": "climate",
+   "format": "json",
+   "access_method": "rest",
+   "license": "cc-by",
+   "updated": 2020,
+   "superseded_by": null
+  },
+  {
+   "id": "src-032",
+   "name": "Household Energy Use",
+   "domain": "energy",
+   "format": "csv",
+   "access_method": "sql",
+   "license": "cc0",
+   "updated": 2015,
+   "superseded_by": null
+  },
+  {
+   "id": "src-033",
+   "name": "Student Loan Balances",
+   "domain": "education",
+   "format": "csv",
+   "access_method": "hub",
+   "license": "odbl",
+   "updated": 2022,
+   "superseded_by": null
+  },
+  {
+   "id": "src-034",
+   "name": "Port Container Moves",
+   "domain": "transport",
+   "format": "xml",
+   "access_method": "hub",
+   "license": "proprietary",
+   "updated": 2017,
+   "superseded_by": null
+  },
+  {
+   "id": "src-035",
+   "name": "Exchange Rate Fixings",
+   "domain": "finance",
+   "format": "parquet",
+   "access_method": "file",
+   "license": "cc-by",
+   "updated": 2024,
+   "superseded_by": null
+  },
+  {
+   "id": "src-036",
+   "name": "Pharmacy Locations",
+   "domain": "health",
+   "format": "json",
+   "access_method": "rest",
+   "license": "odbl",
+   "updated": 2019,
+   "superseded_by": null
+  },
+  {
+   "id": "src-037",
+   "name": "Ocean Heat Content",
+   "domain": "climate",
+   "format": "json",
+   "access_method": "rest",
+   "license": "proprietary",
+   "updated": 2014,
+   "superseded_by": null
+  },
+  {
+   "id": "src-038",
+   "name": "Oil Well Production",
+   "domain": "energy",
+   "format": "csv",
+   "access_method": "sql",
+   "license": "cc-by",
+   "updated": 2021,
+   "superseded_by": "src-052"
+  },
+  {
+   "id": "src-039",
+   "name": "Early Childhood Programs",
+   "domain": "education",
+   "format": "xml",
+   "access_method": "hub",
+   "license": "cc0",
+   "updated": 2016,
+   "superseded_by": null
+  },
+  {
+   "id": "src-040",
+   "name": "EV Charging Points",
+   "domain": "transport",
+   "format": "parquet",
+   "access_method": "hub",
+   "license": "odbl",
+   "updated": 2023,
+   "superseded_by": null
+  },
+  {
+   "id": "src-041",
+   "name": "Small Business Loans",
+   "domain": "finance",
+   "format": "parquet",
+   "access_method": "file",
+   "license": "cc-by",
+   "updated": 2018,
+   "superseded_by": null
+  },
+  {
+   "id": "src-042",
+   "name": "Maternal Health Survey",
+   "domain": "health",
+   "format": "json",
+   "access_method": "rest",
+   "license": "cc0",
+   "updated": 2025,
+   "superseded_by": null
+  },
+  {
+   "id": "src-043",
+   "name": "Drought Monitor Grid",
+   "domain": "climate",
+   "format": "csv",
+   "access_method": "rest",
+   "license": "odbl",
+   "updated": 2020,
+   "superseded_by": null
+  },
+  {
+   "id": "src-044",
+   "name": "Battery Storage Sites",
+   "domain": "energy",
+   "format": "xml",
+   "access_method": "sql",
+   "license": "proprietary",
+   "updated": 2015,
+   "superseded_by": null
+  },
+  {
+   "id": "src-045",
+   "name": "Course Catalog Archive",
+   "domain": "education",
+   "format": "xml",
+   "access_method": "hub",
+   "license": "cc-by",
+   "updated": 2022,
+   "superseded_by": null
+  },
+  {
+   "id": "src-046",
+   "name": "Bridge Inspections",
+   "domain": "transport",
+   "format": "parquet",
+   "access_method": "hub",
+   "license": "odbl",
+   "updated": 2017,
+   "superseded_by": null
+  },
+  {
+   "id": "src-047",
+   "name": "Corporate Filings Index",
+   "domain": "finance",
+   "format": "json",
+   "access_method": "file",
+   "license": "proprietary",
+   "updated": 2024,
+   "superseded_by": null
+  },
+  {
+   "id": "src-048",
+   "name": "Emergency Wait Times",
+   "domain": "health",
+   "format": "csv",
+   "access_method": "rest",
+   "license": "cc-by",
+   "updated": 2019,
+   "superseded_by": null
+  },
+  {
+   "id": "src-049",
+   "name": "Hospital Bed Capacity",
+   "domain": "health",
+   "format": "csv",
+   "access_method": "sql",
+   "license": "odbl",
+   "updated": 2026,
+   "superseded_by": null
+  },
+  {
+   "id": "src-050",
+   "name": "Clinical Trials Registry",
+   "domain": "health",
+   "format": "json",
+   "access_method": "rest",
+   "license": "proprietary",
+   "updated": 2026,
+   "superseded_by": null
+  },
+  {
+   "id": "src-051",
+   "name": "Solar Installations",
+   "domain": "energy",
+   "format": "parquet",
+   "access_method": "sql",
+   "license": "cc-by",
+   "updated": 2022,
+   "superseded_by": null
+  },
+  {
+   "id": "src-052",
+   "name": "Oil Well Production",
+   "domain": "energy",
+   "format": "csv",
+   "access_method": "sql",
+   "license": "cc-by",
+   "updated": 2026,
+   "superseded_by": null
+  },
+  {
+   "id": "src-053",
+   "name": "Vaccination Coverage",
+   "domain": "health",
+   "format": "xml",
+   "access_method": "rest",
+   "license": "cc0",
+   "updated": 2026,
+   "superseded_by": null
+  },
+  {
+   "id": "src-054",
+   "name": "Global Surface Temperature",
+   "domain": "climate",
+   "format": "csv",
+   "access_method": "rest",
+   "license": "cc-by",
+   "updated": 2026,
+   "superseded_by": null
+  },
+  {
+   "id": "src-055",
+   "name": "Airport Arrivals",
+   "domain": "transport",
+   "format": "csv",
+   "access_method": "hub",
+   "license": "odbl",
+   "updated": 2026,
+   "superseded_by": null
+  },
+  {
+   "id": "src-056",
+   "name": "Household Debt Survey",
+   "domain": "finance",
+   "format": "xml",
+   "access_method": "file",
+   "license": "cc0",
+   "updated": 2026,
+   "superseded_by": null
+  }
+ ]
+}
